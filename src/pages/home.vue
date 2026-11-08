@@ -1,44 +1,43 @@
 <script setup>
-import { ref } from "vue"
+  import { ref } from 'vue'
 
-// 選択中のサブスク
-const selectedItem = ref(null)
+  // 選択中のサブスク
+  const selectedItem = ref(null)
 
-// ダイアログ表示状態
-const dialog = ref(false)
+  // ダイアログ表示状態
+  const dialog = ref(false)
 
-// ダミーデータ
-const items = ref([
-  {
-    id: 1,
-    name: "Netflix",
-    category: "動画配信",
-    price: 1980,
-    payment: "15日"
-  },
-  {
-    id: 2,
-    name: "Spotify",
-    category: "音楽配信",
-    price: 980,
-    payment: "1日"
-  },
-  {
-    id: 3,
-    name: "ChatGPT Plus",
-    category: "AIサービス",
-    price: 3000,
-    payment: "22日"
+  // ダミーデータ
+  const items = ref([
+    {
+      id: 1,
+      name: 'Netflix',
+      category: '動画配信',
+      price: 1980,
+      payment: '15日',
+    },
+    {
+      id: 2,
+      name: 'Spotify',
+      category: '音楽配信',
+      price: 980,
+      payment: '1日',
+    },
+    {
+      id: 3,
+      name: 'ChatGPT Plus',
+      category: 'AIサービス',
+      price: 3000,
+      payment: '22日',
+    },
+  ])
+
+  // カードクリック
+  function openDetail (item) {
+    selectedItem.value = item
+    dialog.value = true
   }
-])
-
-// カードクリック
-function openDetail(item) {
-  selectedItem.value = item
-  dialog.value = true
-}
 </script>
-
 
 <template>
   <v-container>

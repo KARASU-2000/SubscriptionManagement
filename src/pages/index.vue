@@ -2,5 +2,5 @@
 </script>
 
 <template>
-    <v-btn to="/home" text="開始"></v-btn>
+  <v-btn text="開始" to="/home" />
 </template>
